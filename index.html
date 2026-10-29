@@ -3,74 +3,92 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Android Dev — apps for kids</title>
-<meta name="description" content="Simple, safe Android apps for toddlers and preschoolers: ColorPop Kids, ColorPop Puzzle, ColorPop Shadows, ColorPop Spot and ColorPop Animals.">
+<title>ColorPop – apps for kids</title>
+<meta name="description" content="Simple, safe Android apps for toddlers and preschoolers: ColorPop Kids, Puzzle, Shadows, Spot and Animals. Free on Google Play.">
+<meta property="og:title" content="ColorPop – apps for kids">
+<meta property="og:description" content="Simple, safe Android apps for toddlers and preschoolers. Free on Google Play.">
 <style>
   :root { --bg: #FFF8E7; --text: #2B2B2B; --muted: #6D6D6D; --card: #FFFFFF; --accent: #EF6C00; }
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; line-height: 1.5; }
-  main { max-width: 720px; margin: 0 auto; padding: 48px 16px; }
-  h1 { color: var(--accent); font-size: 2.2rem; margin: 0 0 8px; }
-  p.lead { color: var(--muted); margin: 0 0 32px; }
-  .app { background: var(--card); border-radius: 24px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 14px rgba(0,0,0,.08); }
-  .app h2 { margin: 0 0 6px; font-size: 1.4rem; }
-  .app p { margin: 0 0 12px; }
-  .links a { color: var(--accent); font-weight: 600; margin-right: 16px; }
-  footer { color: var(--muted); font-size: .9rem; margin-top: 32px; }
+  main { max-width: 720px; margin: 0 auto; padding: 32px 16px 48px; }
+  header { text-align: center; margin-bottom: 28px; }
+  header img { width: min(420px, 90%); height: auto; }
+  p.lead { color: var(--muted); margin: 10px 0 0; }
+  .app { background: var(--card); border-radius: 24px; padding: 20px; margin-bottom: 16px; box-shadow: 0 4px 14px rgba(0,0,0,.08); display: flex; gap: 16px; align-items: flex-start; }
+  .icon { flex: 0 0 64px; height: 64px; border-radius: 18px; background: var(--c); display: grid; place-items: center; font-size: 34px; }
+  .body { min-width: 0; }
+  .app h2 { margin: 0 0 4px; font-size: 1.25rem; }
+  .app p { margin: 0 0 14px; color: var(--muted); }
+  .play { display: inline-block; background: #111; color: #fff; text-decoration: none; font-weight: 700; padding: 12px 20px; border-radius: 14px; margin-right: 12px; }
+  .play::before { content: "▶ "; color: #34A853; }
+  .small { color: var(--muted); font-size: .9rem; display: inline-block; margin-top: 10px; }
+  footer { color: var(--muted); font-size: .9rem; margin-top: 28px; text-align: center; }
   footer a { color: var(--accent); }
 </style>
 </head>
 <body>
 <main>
-  <h1>Android Dev</h1>
-  <p class="lead">Simple, safe and happy Android apps for toddlers and preschoolers. Offline, no accounts, no personal data.</p>
+  <header>
+    <img src="logo.svg" alt="ColorPop">
+    <p class="lead">Simple, safe and happy apps for toddlers and preschoolers.<br>Offline · No accounts · No ads while playing</p>
+  </header>
 
-  <section class="app">
-    <h2>🎨 ColorPop Kids: Coloring Book</h2>
-    <p>Tap-to-color coloring book with 150 pictures in 9 themes, for kids aged 2–6.</p>
-    <div class="links">
-      <a href="https://play.google.com/store/apps/details?id=com.colorpop.kids">Google Play</a>
-      <a href="https://sites.google.com/view/colorpopkids-privacy">Privacy policy</a>
+  <section class="app" id="kids" style="--c:#EC407A">
+    <div class="icon" aria-hidden="true">🎨</div>
+    <div class="body">
+      <h2>ColorPop Kids: Coloring Book</h2>
+      <p>Tap-to-color coloring book with over 150 pictures: animals, dinosaurs, space, winter and more. Ages 2–6.</p>
+      <a class="play" data-pkg="com.colorpop.kids" href="https://play.google.com/store/apps/details?id=com.colorpop.kids">Get it on Google Play</a>
+      <a class="small" href="https://sites.google.com/view/colorpopkids-privacy">Privacy policy</a>
     </div>
   </section>
-
-  <section class="app">
-    <h2>🧩 ColorPop Puzzle: Kids Jigsaw</h2>
-    <p>Easy drag-and-snap jigsaw puzzles with 4, 6 or 9 pieces, for kids aged 2–5.</p>
-    <div class="links">
-      <a href="https://play.google.com/store/apps/details?id=com.colorpop.puzzle">Google Play</a>
-      <a href="https://sites.google.com/view/colorpoppuzzle-privacy/home">Privacy policy</a>
+  <section class="app" id="puzzle" style="--c:#43A047">
+    <div class="icon" aria-hidden="true">🧩</div>
+    <div class="body">
+      <h2>ColorPop Puzzle: Kids Jigsaw</h2>
+      <p>Easy drag-and-snap jigsaw puzzles with 4, 6 or 9 pieces. Ages 2–5.</p>
+      <a class="play" data-pkg="com.colorpop.puzzle" href="https://play.google.com/store/apps/details?id=com.colorpop.puzzle">Get it on Google Play</a>
+      <a class="small" href="https://sites.google.com/view/colorpoppuzzle-privacy/home">Privacy policy</a>
     </div>
   </section>
-
-  <section class="app">
-    <h2>🌑 ColorPop Shadows: Match Game</h2>
-    <p>Find the shadow! Drag each colorful picture onto its shadow, with 2, 3 or 4 shadows, for kids aged 2–4.</p>
-    <div class="links">
-      <a href="https://play.google.com/store/apps/details?id=com.colorpop.shadows">Google Play</a>
-      <a href="https://sites.google.com/view/colorpopshadows-privacy">Privacy policy</a>
+  <section class="app" id="shadows" style="--c:#5C6BC0">
+    <div class="icon" aria-hidden="true">🌑</div>
+    <div class="body">
+      <h2>ColorPop Shadows: Match Game</h2>
+      <p>Find the shadow! Drag each colorful picture onto its shadow. Ages 2–4.</p>
+      <a class="play" data-pkg="com.colorpop.shadows" href="https://play.google.com/store/apps/details?id=com.colorpop.shadows">Get it on Google Play</a>
+      <a class="small" href="https://sites.google.com/view/colorpopshadows-privacy">Privacy policy</a>
     </div>
   </section>
-
-  <section class="app">
-    <h2>🔍 ColorPop Spot the Difference</h2>
-    <p>Spot the difference! Find what changed color in two copies of a picture, with 1, 2 or 3 differences, for kids aged 3–6.</p>
-    <div class="links">
-      <a href="https://play.google.com/store/apps/details?id=com.colorpop.spot">Google Play</a>
-      <a href="https://sites.google.com/view/colorpopspot-privacy/home">Privacy policy</a>
+  <section class="app" id="spot" style="--c:#26A69A">
+    <div class="icon" aria-hidden="true">🔍</div>
+    <div class="body">
+      <h2>ColorPop Spot the Difference</h2>
+      <p>Find what changed in two copies of a picture, with 1, 2 or 3 differences. Ages 3–6.</p>
+      <a class="play" data-pkg="com.colorpop.spot" href="https://play.google.com/store/apps/details?id=com.colorpop.spot">Get it on Google Play</a>
+      <a class="small" href="https://sites.google.com/view/colorpopspot-privacy/home">Privacy policy</a>
     </div>
   </section>
-
-  <section class="app">
-    <h2>🐮 ColorPop Animals</h2>
-    <p>Tap the animals! A living farm, sea, jungle and sky: animals move and make their sounds, babies are born, plus 18 mini-games and learning games with numbers and colors, for kids aged 2–6. No ads.</p>
-    <div class="links">
-      <a href="https://play.google.com/store/apps/details?id=com.colorpop.animals">Google Play</a>
-      <a href="https://sites.google.com/view/colorpopanimals-privacy/home">Privacy policy</a>
+  <section class="app" id="animals" style="--c:#7CB342">
+    <div class="icon" aria-hidden="true">🐮</div>
+    <div class="body">
+      <h2>ColorPop Animals</h2>
+      <p>Tap the animals! A living farm, sea, jungle and sky, plus mini-games with numbers and colors. Ages 2–6. No ads.</p>
+      <a class="play" data-pkg="com.colorpop.animals" href="https://play.google.com/store/apps/details?id=com.colorpop.animals">Get it on Google Play</a>
+      <a class="small" href="https://sites.google.com/view/colorpopanimals-privacy/home">Privacy policy</a>
     </div>
   </section>
-
-  <footer>Contact: <a href="mailto:just.make.apps@gmail.com">just.make.apps@gmail.com</a></footer>
+  <footer>Made by Android Dev · Contact: <a href="mailto:just.make.apps@gmail.com">just.make.apps@gmail.com</a></footer>
 </main>
+<script>
+// On Android, open the Play Store app directly (in-app browsers such as Instagram's often can't hand a play.google.com link to it).
+if (/Android/i.test(navigator.userAgent)) {
+  document.querySelectorAll('a.play').forEach(function (a) {
+    var web = 'https://play.google.com/store/apps/details?id=' + a.dataset.pkg;
+    a.href = 'intent://details?id=' + a.dataset.pkg + '#Intent;scheme=market;package=com.android.vending;S.browser_fallback_url=' + encodeURIComponent(web) + ';end';
+  });
+}
+</script>
 </body>
 </html>
