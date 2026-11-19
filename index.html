@@ -23,6 +23,8 @@
   .play { display: inline-block; background: #111; color: #fff; text-decoration: none; font-weight: 700; padding: 12px 20px; border-radius: 14px; margin-right: 12px; }
   .play::before { content: "▶ "; color: #34A853; }
   .small { color: var(--muted); font-size: .9rem; display: inline-block; margin-top: 10px; }
+  .free { display: flex; align-items: center; justify-content: space-between; gap: 12px; background: #E53935; color: #fff; text-decoration: none; border-radius: 20px; padding: 16px 20px; margin-bottom: 18px; font-weight: 700; }
+  .free span { font-weight: 500; opacity: .95; display: block; font-size: .95rem; }
   footer { color: var(--muted); font-size: .9rem; margin-top: 28px; text-align: center; }
   footer a { color: var(--accent); }
 </style>
@@ -33,6 +35,10 @@
     <img src="logo.svg" alt="ColorPop">
     <p class="lead">Simple, safe and happy apps for toddlers and preschoolers.<br>Offline · No accounts · No ads while playing</p>
   </header>
+
+  <a class="free" href="coloring-pages/">
+    <div>🖍️ Free printable coloring pages<span>Christmas tree, Santa, reindeer and more · PDF</span></div><div aria-hidden="true">→</div>
+  </a>
 
   <section class="app" id="kids" style="--c:#EC407A">
     <div class="icon" aria-hidden="true">🎨</div>
@@ -79,7 +85,7 @@
       <a class="small" href="https://sites.google.com/view/colorpopanimals-privacy/home">Privacy policy</a>
     </div>
   </section>
-  <footer>Made by Android Dev · Contact: <a href="mailto:just.make.apps@gmail.com">just.make.apps@gmail.com</a></footer>
+  <footer><a href="coloring-pages/">Free coloring pages</a> · Made by Android Dev · Contact: <a href="mailto:just.make.apps@gmail.com">just.make.apps@gmail.com</a></footer>
 </main>
 <script>
 // On Android, open the Play Store app directly (in-app browsers such as Instagram's often can't hand a play.google.com link to it).
